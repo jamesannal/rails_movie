@@ -1,21 +1,29 @@
 class ShowsController < ApplicationController
   def index
-    shows = Show.all()
-    render({ json: shows })
+    respond_to do |format|
+      format.html
+      format.json { render json: Show.all}
+    end
   end
 
   def show
     show = Show.find(params[:id])
-    render({ json: show})
+    render json: show
   end
 
   def create
-    show = Show.create(show_params())
-    render({ json: show })
+    show = Show.create(show_params)
+    render json: show
   end
 
   def show_params
-    return params.require(:show).permit([:title, :series, :description, :image, :programmeID])
+    params.require(:show).permit([
+      :title, 
+      :series, 
+      :description, 
+      :image, 
+      :programmeID
+    ])
   end
 
 end
