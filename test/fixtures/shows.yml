@@ -1,7 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
+  title: Broadchurch
+  series: 3
+  description: Dr who and Sophie from Peep Show solve some crimes
+  image: placeholder.jpg
+  programmeID: fjghsdaf
 
 two:
-  title: MyString
+  title: Peep Show
+  series: 9
+  description: Some men in a flat
+  image: placeholder.jpg
+  programmeID: fghjjsdi
